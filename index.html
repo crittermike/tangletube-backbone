@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>TangleTube - Create bundles of YouTube videos and play them together</title>
+
+    <script language="javascript" src="js/jquery.js" type="text/javascript"></script>
+    <script language="javascript" src="js/json2.js" type="text/javascript"></script>
+    <script language="javascript" src="js/underscore.js" type="text/javascript"></script>
+    <script language="javascript" src="js/backbone.js" type="text/javascript"></script>
+    <script language="javascript" src="js/tubeplayer.js" type="text/javascript"></script>
+    <script language="javascript" src="js/bootstrap-modal.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-6322775-16']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">TangleTube:<span>&nbsp;&nbsp;Create bundles of YouTube videos and play them together.</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="videos">
+        <div class="well">
+          <form class="form-inline" id="addform" onsubmit="return false;">
+            <input id="linkfield" type="text" placeholder="Paste YouTube link" />
+            <button type="submit" class="btn"><i class="icon-plus"></i> Add Video</button>
+          </form>
+          <div class="btn-group">
+            <button id="rewindbutton" class="btn"><i class="icon-fast-backward"></i></button>
+            <button id="pausebutton" class="btn"><i class="icon-pause"></i></button>
+            <button id="playbutton" class="btn btn-success"><i class="icon-play"></i> Play All</button>
+          </div>
+          <button id="linkbutton" data-toggle="modal" href="#linkModal" class="btn btn-info"><i class="icon-share"></i> Share Link</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="linkModal" class="modal" style="display: none;">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Share the link</h3>
+      </div>
+      <div class="modal-body">
+        <p>Copy and paste this link anywhere to share this bundle.</p>
+        <input style="width: 95%" type="text" name="linkinput" id="linkinput" value="http://tangletube.com/?" />
+      </div>
+    </div>
+
+    <script language="javascript" src="js/app.js" type="text/javascript"></script>
+  </body>
+</html>

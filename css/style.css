@@ -1,0 +1,44 @@
+body {
+  padding-top: 70px;
+}
+.brand span {
+  font-size: 14px;
+  position: relative;
+  top: -1px;
+}
+
+#videos ul,
+#videos li {
+  list-style: none;
+  padding: 0; 
+  margin: 0;
+}
+
+#videos li {
+  float: left;
+  width: 470px;
+  margin: 0;
+  line-height: 0;
+}
+.btn-group, #linkbutton {
+  float: right;
+}
+#linkbutton {
+  margin-right: 20px;
+}
+#addform {
+  width: 50%;
+  margin-bottom: 0;
+  float: left;
+}
+.well {
+  overflow: hidden;
+}
+span.delete {
+  font-size: 12px;
+  font-weight: normal;
+  float: right;
+}
+span.delete:hover {
+  cursor: pointer;
+}
